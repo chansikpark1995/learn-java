@@ -1,22 +1,9 @@
-package practice;
+package sec01.exam03;
 
 public class Calculator {
-
-	void powerOn(){
-		System.out.println("Àü¿ø Å´");
-		}
-		
-	int plus(int x, int y){
-		
-		int result = x + y;
-		return result;
-				
-	}	
-	
-	double divide(int x,int y) {
-	
-		double result = (double)x / (double)y;
-		return result;
-		
+	double areaCircle(double r) {
+		System.out.println("Calculator °´Ã¼ÀÇ areaCircle() ½ÇÇà"+r);
+	return 3.14159*r*r;
 	}
+
 }
