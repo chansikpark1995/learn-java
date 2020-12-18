@@ -1,0 +1,53 @@
+
+public class DmbPhone01 {
+
+   //field
+   private int channel = 1;
+   double volumne = 1.0;
+   
+   //constructor
+   public DmbPhone01() {
+   }
+   public DmbPhone01(int channel_d) {
+      this.channel = channel_d;
+      System.out.println("채널이 변경이 되었습니다. channel : " + channel_d);
+   }
+   
+   //method
+   public void changChannel(int channel) {
+      this.channel = channel;
+      System.out.println("변경후 channel : "+channel);
+   }
+   
+   public void setChannel(int channel2) {
+      this.channel = channel2;
+      System.out.println("setChannel(int channel2)this.channel = "+channel);
+   }
+
+}
+
+public class FiveGPhone extends DmbPhone01 {
+
+   FiveGPhone(){}
+   
+   public FiveGPhone(int channel) {
+      super.setChannel(channel);
+      //super.channel = channel;
+      //System.out.println("FiveGPhone(int channel) super.channel ="+super.channel);
+   }
+
+   
+   @Override
+   public void changChannel(int channel) {
+      /*
+       * super.channel=this.channel+channel; System.out.println("super.channel : "+
+       * super.channel);
+       */
+   }
+   
+   
+   public static void main(String[] args) {
+      FiveGPhone fp = new FiveGPhone(100);
+      //fp.changChannel(10);
+   }
+}
